@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>8-А — Наш класс</title>
+<style>
+:root{--bg:#f4f7fb;--ink:#172033;--muted:#68748a;--blue:#3568f5;--navy:#101827;--card:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(120deg,#101827 0%,#1d3157 60%,#3568f5 130%);color:white;padding:22px max(6vw,22px) 76px}
+nav{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;letter-spacing:.3px;font-size:19px}.brand span{color:#9db7ff}
+nav a{color:#dce5ff;text-decoration:none;margin-left:22px;font-size:14px}nav a:hover{color:white}
+.hero{max-width:1160px;margin:75px auto 0}.eyebrow{color:#b8caff;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:700}.hero h1{font-size:clamp(42px,7vw,76px);line-height:1.02;letter-spacing:-2.5px;margin:16px 0}.hero p{max-width:570px;color:#d6def1;font-size:17px;line-height:1.7;margin:0 0 28px}.button{display:inline-block;border:0;border-radius:12px;background:var(--blue);color:white;padding:13px 19px;font-weight:700;text-decoration:none;cursor:pointer}.button.light{background:white;color:#1e3f9b}.hero .button{box-shadow:0 8px 24px #07132e55}
+main{max-width:1160px;margin:-35px auto 0;padding:0 22px 70px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stat,.panel{background:var(--card);border:1px solid #e8edf5;border-radius:18px;box-shadow:0 12px 34px #17203308}.stat{padding:22px}.stat strong{display:block;font-size:27px}.stat span{font-size:13px;color:var(--muted)}
+section{padding-top:64px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:22px}.section-head h2{font-size:30px;letter-spacing:-.8px;margin:0 0 6px}.section-head p{margin:0;color:var(--muted);font-size:14px}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.photo{min-height:205px;border-radius:17px;overflow:hidden;position:relative;background:linear-gradient(135deg,#dce8ff,#9eb8f5);display:flex;align-items:center;justify-content:center;color:#294a9d;font-size:15px;font-weight:700}.photo:nth-child(2){background:linear-gradient(135deg,#d9f1ed,#9ed9ce);color:#236b61}.photo:nth-child(3){background:linear-gradient(135deg,#fce8d9,#f3b98e);color:#93552e}.photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.photo .caption{position:absolute;bottom:12px;left:12px;background:#101827bd;color:white;border-radius:9px;padding:7px 10px;font-size:12px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:21px}.tag{display:inline-block;padding:6px 9px;border-radius:99px;background:#edf2ff;color:#3159c7;font-size:11px;font-weight:800}.card h3{font-size:18px;margin:14px 0 8px}.card p{color:var(--muted);line-height:1.65;font-size:14px;margin:0}.date{font-size:12px;color:#8792a5;margin-top:15px}
+.events{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.event{display:flex;gap:17px;align-items:center;padding:19px}.datebox{min-width:58px;height:62px;border-radius:13px;background:#edf2ff;color:#3159c7;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800}.datebox b{font-size:22px}.datebox small{font-size:10px;text-transform:uppercase}
+.admin{padding:22px}.admin h3{margin:0 0 8px}.admin p{color:var(--muted);font-size:13px;line-height:1.6}.admin-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px}.button.secondary{background:#edf2ff;color:#3159c7}.button.ghost{background:#eef1f6;color:#455168}
+input,textarea{font:inherit;border:1px solid #dce3ee;border-radius:10px;padding:11px;width:100%;margin:7px 0 12px;background:white;color:var(--ink)}textarea{min-height:85px;resize:vertical}label{font-size:13px;font-weight:700}.hidden{display:none}
+footer{background:var(--navy);color:#c4cee0;text-align:center;padding:30px 20px;font-size:13px}footer strong{color:white}
+@media(max-width:760px){nav{align-items:flex-start}nav div:last-child{display:flex;flex-wrap:wrap;justify-content:flex-end}nav a{margin:4px 0 4px 13px}.hero{margin-top:55px}.stats,.gallery,.cards{grid-template-columns:1fr}.photo{min-height:230px}.events{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.stat{padding:17px}}
+</style>
+</head>
+<body>
+<header>
+<nav><div class="brand">КЛАСС <span>8-А</span></div><div><a href="#gallery">Фото</a><a href="#news">Новости</a><a href="#events">Мероприятия</a></div></nav>
+<div class="hero"><div class="eyebrow">Один класс — одна команда</div><h1>Привет,<br>это 8-А!</h1><p>Наше место для ярких воспоминаний, школьных новостей и событий, которые хочется сохранить.</p><a class="button light" href="#gallery">Смотреть жизнь класса ↓</a></div>
+</header>
+<main>
+<div class="stats"><div class="stat"><strong>8-А</strong><span>Наш класс</span></div><div class="stat"><strong>Вместе</strong><span>Учимся, растём, побеждаем</span></div><div class="stat"><strong>2026</strong><span>Новый год — новые истории</span></div></div>
+<section id="gallery"><div class="section-head"><div><h2>Фотографии учеников</h2><p>Моменты, которые хочется помнить.</p></div></div><div class="gallery" id="galleryGrid">
+<div class="photo">Добавьте первое фото</div><div class="photo">Наши школьные дни</div><div class="photo">Вместе веселее</div>
+</div></section>
+<section id="news"><div class="section-head"><div><h2>Новости класса</h2><p>Важное и интересное из жизни 8-А.</p></div></div><div class="cards" id="newsGrid">
+<article class="panel card"><span class="tag">НОВОСТИ</span><h3>Добро пожаловать на сайт 8-А!</h3><p>Здесь будут появляться новости, объявления и самые интересные моменты нашего класса.</p><div class="date">24 ноября 2026</div></article>
+<article class="panel card"><span class="tag">НАШ КЛАСС</span><h3>Начинаем новую главу</h3><p>Сохраняем воспоминания, делимся достижениями и поддерживаем друг друга.</p><div class="date">2026 учебный год</div></article>
+</div></section>
+<section id="events"><div class="section-head"><div><h2>Наши мероприятия</h2><p>Школьные события и общие впечатления.</p></div></div><div class="events" id="eventsGrid">
+<div class="panel event"><div class="datebox"><b>01</b><small>Событие</small></div><div><h3>Наше первое мероприятие</h3><p class="date">Добавьте дату и описание</p></div></div>
+<div class="panel event"><div class="datebox"><b>02</b><small>Событие</small></div><div><h3>Новые впечатления</h3><p class="date">Скоро здесь будут ваши события</p></div></div>
+</div></section>
+<section><div class="panel admin"><h3>Обновить сайт</h3><p>Добавляйте фотографии и новости прямо в браузере. Изменения сохраняются на этом устройстве. Для общей публикации сайта используйте хостинг и загружайте обновлённый файл.</p>
+<div class="admin-actions"><button class="button" onclick="document.getElementById('photoInput').click()">＋ Добавить фото</button><button class="button secondary" onclick="toggleForm('newsForm')">＋ Добавить новость</button><button class="button ghost" onclick="toggleForm('eventForm')">＋ Добавить мероприятие</button></div>
+<input id="photoInput" class="hidden" type="file" accept="image/*" multiple>
+<form id="newsForm" class="hidden" onsubmit="addNews(event)"><h3>Новая новость</h3><label>Заголовок</label><input id="newsTitle" required maxlength="70"><label>Текст</label><textarea id="newsText" required maxlength="350"></textarea><button class="button">Опубликовать</button></form>
+<form id="eventForm" class="hidden" onsubmit="addEvent(event)"><h3>Новое мероприятие</h3><label>Название</label><input id="eventTitle" required maxlength="70"><label>Дата или подпись</label><input id="eventDate" placeholder="Например: 15 декабря"><button class="button">Добавить</button></form>
+</div></section>
+</main>
+<footer><strong>8-А</strong> · Наш класс, наши истории.<br><span>Сайт класса • 2026</span></footer>
+<script>
+const $=id=>document.getElementById(id);
+function toggleForm(id){$(id).classList.toggle('hidden')}
+function addNews(e){e.preventDefault();const title=$('newsTitle').value.trim(),body=$('newsText').value.trim();const el=document.createElement('article');el.className='panel card';el.innerHTML='<span class="tag">НОВОСТИ</span>';const h=document.createElement('h3');h.textContent=title;const p=document.createElement('p');p.textContent=body;const d=document.createElement('div');d.className='date';d.textContent=new Date().toLocaleDateString('ru-RU');el.append(h,p,d);$('newsGrid').prepend(el);e.target.reset();e.target.classList.add('hidden')}
+function addEvent(e){e.preventDefault();const title=$('eventTitle').value.trim(),date=$('eventDate').value.trim()||'Дата уточняется';const el=document.createElement('div');el.className='panel event';const box=document.createElement('div');box.className='datebox';box.innerHTML='<b>★</b><small>Событие</small>';const info=document.createElement('div');const h=document.createElement('h3');h.textContent=title;const p=document.createElement('p');p.className='date';p.textContent=date;info.append(h,p);el.append(box,info);$('eventsGrid').prepend(el);e.target.reset();e.target.classList.add('hidden')}
+$('photoInput').addEventListener('change',e=>{[...e.target.files].forEach(file=>{if(!file.type.startsWith('image/'))return;const url=URL.createObjectURL(file);const card=document.createElement('div');card.className='photo';const img=document.createElement('img');img.src=url;img.alt='Фотография класса';const cap=document.createElement('span');cap.className='caption';cap.textContent=file.name;card.append(img,cap);$('galleryGrid').prepend(card)})});
+</script>
+</body></html>
